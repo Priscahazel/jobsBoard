@@ -1,0 +1,17 @@
+<template name="home">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3">
+        <h3>Jobs</h3>
+
+        {{#if currentUser}}
+        {{> quickForm id="addJobs" collection="Jobs" type="insert"}}
+        {{else}}
+        <p class="text-center">
+          Sorry, you need to be logged in!
+        </p>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</template>

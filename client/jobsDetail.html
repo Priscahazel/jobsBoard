@@ -1,0 +1,23 @@
+<template name="jobsDetail">
+  <h1>{{jobs.title}}</h1>
+  <p>
+    {{jobs.summary}}
+  </p>
+  <hr/>
+  <h4>Apply for this job</h4>
+  {{> quickForm id="insertApplication" collection="Applications" type="insert"}}
+  <hr/>
+  {{#each applications}}
+  <div class="container">
+    <div class = "row">
+      <div class = "col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            {{description}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+</template>

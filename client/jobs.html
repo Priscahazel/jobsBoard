@@ -1,0 +1,46 @@
+ <template name="jobs">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>{{pageTitle}}</h1>
+                <p>
+                    <a href="{{pathFor 'home'}}" class="btn btn-default"><i class="fa fa-plus"></i> Create jobs</a>
+
+                    <a href="{{pathFor 'jobs'}}" class="btn btn-danger">All Jobs</a>
+
+                    <a href="{{pathFor 'jobsCategory' category='html'}}" class="btn btn-primary">HTML</a>
+
+                    <a href="{{pathFor 'jobsCategory' category='javascript'}}" class="btn btn-success">JavaScript</a>
+
+                    <a href="{{pathFor 'jobsCategory' category='css'}}" class="btn btn-info">Css</a>
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            {{#each jobs}}
+            <div class="col-sm-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        {{title}}
+                    </div>
+                    <div class="panel-body">
+                        {{summary}}
+                        <br/>
+                        <br/>
+                        <span class="label label-default">{{category}}</span>
+                    </div>
+                    <div class="panel-footer">
+                        <a href="{{pathFor 'jobsDetail' _id=_id}}" class="btn btn-primary">Read more</a>
+                        {{#if $eq owner User._id}}
+                        <a href="{{pathFor 'editJobs'}}" class="btn btn-default pull-right"><i class="fa fa-pencil"></i></a>
+                        {{/if}}
+                    </div>
+                </div>
+            </div>
+            <!-- {{else}}
+            You can use {{else}} to handle an empty array
+            <p>No jobs yet</p> -->
+            {{/each}}
+        </div>
+    </div>
+</template> 

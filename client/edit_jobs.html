@@ -1,0 +1,5 @@
+<template name="editJobs">
+  <h2>{{jobs.title}}</h2>
+  <hr/>
+  {{> quickForm collection="Jobs" doc=jobs id="editJobs" type="update"}}
+</template>
