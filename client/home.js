@@ -1,4 +1,4 @@
-AutoForm.hooks({
+ AutoForm.hooks({
   addProject: {
     onSuccess: function(operation, result, template) {
       Router.go('projects');

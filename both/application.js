@@ -10,14 +10,14 @@ Applications.attachSchema(new SimpleSchema({
     }
   },
 
-  project:{
+  job:{
     type:String,
     autoform: {
       omit:true
     }
   },
 
-  userId:{
+  owner:{
     type:String,
     autoform:{
       omit:true

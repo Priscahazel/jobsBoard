@@ -6,3 +6,31 @@ h1{
   padding-top:0px;
   padding-bottom: 0px;
 }
+
+#space .btn{
+  left: -60px;
+  width:300px;
+}
+
+ul{
+  right: -30px;
+  margin-right: 60px;
+
+
+}
+
+
+li{
+ list-style: none; 
+ margin-bottom:10px;
+}
+
+
+
+li .btn{ 
+  height:50px;
+  display:table-cell;
+  vertical-align:middle;
+
+}
+

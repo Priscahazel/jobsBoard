@@ -1,18 +1,18 @@
 <template name="masterLayout">
   {{> nav}}
-
-  {{> yield}}
-
+  <div class="content">
+    {{> yield}}
+  </div>
   {{> footer}}
 </template>
 
 <template name ="nav">
  <nav class="navbar navbar-default" id="nav">
    <div class="container-fluid">
-     <a href="#">
-      <img alt="" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgK_jIfhiQ3VdWQgbmo2wJQm3DbUXsuNdRklZaEP797VVIPwUk">
-    </a>
-    <ul class="nav navbar-nav navbar-right" >
+     <ul class="nav navbar-nav navbar- left" id="pic" >
+       <img alt="" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgK_jIfhiQ3VdWQgbmo2wJQm3DbUXsuNdRklZaEP797VVIPwUk">
+     </ul>
+     <ul class="nav navbar-nav navbar-right" >
       <li><a href="{{pathFor 'home'}}"> Home </a></li>
       <li><a href="{{pathFor 'jobs'}}"> Jobs</a></li>
       <li><a href="{{pathFor 'about'}}"> About </a></li> 
@@ -34,6 +34,11 @@
 
 <template name="footer">
   <footer>
-    <h4>Footer!</h4>
+
+    <nav class="navbar navbar-default navbar-static-bottom">
+      <div class="container-fluid">
+        <h4> JobsBoard registered trademark</h4>
+      </div>
+    </nav>
   </footer>
 </template>

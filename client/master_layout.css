@@ -1,9 +1,29 @@
 #nav{
-  background-color: #2980b9;
-  color:#000000;
-  /*font-color:#FFFF00;*/
+  background-color: #FF6600;
+  
+}
+
+#nav a{
+  color:#FFFFFF;
+}
+
+#pic{
+  margin-top:10px;
 }
 
 body{
   background-color:#95a5a6 ;
+  color:#FF8000;
+
+}
+
+.content{
+  min-height:527px;
+  background-image: url(images/pic.jpg)
+}
+
+.navbar-static-bottom{
+  margin-bottom: 0px;
+  background-color: #FF6600;
+  padding-bottom: 0px;
 }

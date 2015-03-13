@@ -1,22 +1,52 @@
+<!-- <template name="jobsDetail">
+  <div class="container">
+    <div class="row"> -->
+      <!-- <div class="col-md-3">
+        <p></p>
+      </div>
+      <div class = "col-md-9">
+        <h1>{{jobs.title}}</h1>
+        <p>
+          {{jobs.summary}}
+        </p>
+        <hr/>
+        <h4>Apply for this job</h4>
+        {{> quickForm id="insertApplication" collection="Applications" type="insert"}}
+        <hr/>
+        {{#each applications}}
+        <div class="container">
+          <div class = "row">
+            <div class = "col-md-4">
+              <div class="panel panel-default">
+                <div class="panel-body">
+                  {{description}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</template> -->
+
 <template name="jobsDetail">
-  <h1>{{jobs.title}}</h1>
+  {{#with job}}
+  <h1>{{title}}</h1>
   <p>
-    {{jobs.summary}}
+    {{summary}}
   </p>
+  {{/with}}
+
   <hr/>
   <h4>Apply for this job</h4>
   {{> quickForm id="insertApplication" collection="Applications" type="insert"}}
   <hr/>
   {{#each applications}}
-  <div class="container">
-    <div class = "row">
-      <div class = "col-md-4">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            {{description}}
-          </div>
-        </div>
-      </div>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      {{description}}
     </div>
   </div>
   {{/each}}

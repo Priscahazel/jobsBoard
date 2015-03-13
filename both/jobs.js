@@ -8,6 +8,7 @@ Jobs.attachSchema(new SimpleSchema({
   },
   summary: {
     type: String,
+    // placeholder: 'type',
     label: "Brief summary",
     optional: true,
     max: 1000,
@@ -27,6 +28,18 @@ Jobs.attachSchema(new SimpleSchema({
       }
     }
   },
+
+  picture: {
+    type: String,
+    autoform: {
+      afFieldInput: {
+        type: 'fileUpload',
+        collection: 'Images'
+      }
+    },
+    label: 'Choose file'
+  },
+
   owner: {
     type: String,
     autoform: {
